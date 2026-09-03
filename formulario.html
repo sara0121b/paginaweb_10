@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meduza | Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="carrito.js" defer></script>
+      
+  </head>
+<form method= "post" action="datos.php">
+  <body class="form-body">
+    <div class="form-page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Meduza</span>
+        </div>
+
+        <nav class="main-nav">
+          <a href="pagina1.html">Inicio</a>
+          <a href="coleccion.html">Colección</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="formulario.html" class="active-link">Formulario</a>
+          <a href="Tutoriales.html">Tutoriales</a>
+        </nav>
+
+        <div class="header-actions">
+          <details class="user-dropdown">
+            <summary>Contacto · Sara Bedoya</summary>
+            <div class="user-dropdown-content">
+              <span>Sara Bedoya<br />320 86 59906</span>
+            </div>
+          </details>
+          <button class="cart-btn" type="button">Carrito</button>
+        </div>
+      </header>
+
+      <main class="form-main">
+        <section class="form-intro">
+          <p class="mini-tag">Formulario de compra</p>
+          <h1>Completa tus datos para continuar.</h1>
+          <p>Déjanos tu información y selecciona el método de pago que prefieras.</p>
+          <div class="form-note">
+            <span class="form-note-icon">✦</span>
+            <div>
+              <strong>Tu pedido, a tu manera</strong>
+              <span>Preparamos cada compra con cuidado.</span>
+            </div>
+          </div>
+        </section>
+
+        <form class="order-form" method="post" action="datos.php">
+          <div class="form-heading">
+            <span>01</span>
+            <div>
+              <strong>Datos de entrega</strong>
+              <small>Cuéntanos dónde recibir tu pedido</small>
+            </div>
+          </div>
+
+          <label for="nombre">
+            Nombre completo
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required />
+          </label>
+
+          <label for="direccion">
+            Dirección
+            <input type="text" name="direccion" id="direccion" placeholder="Calle, número y ciudad" required />
+          </label>
+
+          <label for="telefono">
+            Teléfono
+            <input type="tel" name="telefono" id="telefono" placeholder="320 000 0000" required />
+          </label>
+
+          <label for="pago">
+            Tipo de pago
+            <select name="pago" id="pago" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option value="tarjeta">Tarjeta débito o crédito</option>
+              <option value="transferencia">Transferencia bancaria</option>
+              <option value="contra-entrega">Pago contra entrega</option>
+            </select>
+          </label>
+
+          <p class="secure-note">Tus datos se utilizan únicamente para preparar tu pedido.</p>
+          <button class="submit-form" type="submit">Continuar con la compra</button>
+        </form>
+      </main>
+    </div>
+</form>
+  </body>
+</html>
